@@ -35,8 +35,10 @@ const { title } = Astro.props;
 	html {
 		font-family: system-ui, sans-serif;
 	}
-	html,body {
+	html, body {
 		height: 100vh;
+		background-attachment:fixed;
+		@apply bg-gradient-to-br from-gray-800 to-neutral-600 !important;
 	}
 	code {
 		font-family:
