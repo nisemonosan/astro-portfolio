@@ -1,0 +1,24 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+	desc: string;
+}
+
+const { href, title, body, desc } = Astro.props;
+---
+
+<div class="rounded-lg bg-white my-4">
+	<div class="flex flex-row items-start">
+		<img
+			class="w-[80px] max-w-fit m-[5px]"
+			src={href}
+			alt={title}/>
+		<div class="w-full flex flex-col justify-start ml-2 p-2">
+			<p class="text-center text-white text-sm bg-gray-700 shrink-0 rounded-2xl font-semibold tracking-wider">{desc}</p>
+			<h5 class="text-xl text-black font-medium">{title}</h5>
+			<p class="text-sm text-black font-base">{body}</p>
+		</div>
+	</div>
+</div>
