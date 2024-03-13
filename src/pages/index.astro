@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Portfolio">
+	<div class="container h-screen">
+		<main>
+			<a href="/">Home</a>
+			<a href="/photos">Photos</a>
+			<a href="/works">Works</a>
+
+			<div class="icon">
+				<img class="icon"  src="/icon.png" alt="icon"/>
+			</div>
+			<h1 class="text-4xl font-bold text-center">apple</h1>
+			<div class="w-max m-4">
+				<p class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-xl text-white font-medium mt-8 mb-8">Hi, I'm apple!<br>This page is about me.</p>
+			</div>
+
+			<Card 
+				href='/photoshop.png',
+				title='Photoshop',
+				body='画像編集・合成'
+				desc='Software'
+			/>
+			<Card
+				href='/illustrator.png',
+				title='Illustrator',
+				body='グラフィック作成',
+				desc='Software'
+			/>
+			<Card
+				href='python.png',
+				title='Python'
+				body='DiscordBot開発'
+				desc='Programming'
+			/>
+
+		</main>
+	</div>
+</Layout>
+
+<style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	.container {
+		@apply bg-gradient-to-br from-gray-800 to-neutral-600 !important;
+	}
+
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 700px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	
+	.icon {
+		display: flex;
+		margin: 1em auto .5em;
+}
+
+	img.icon { 
+		border-radius: 50%;
+		width: 70%;
+		max-width: 400px;
+		object-fit: cover;
+		
+	}
+</style>
