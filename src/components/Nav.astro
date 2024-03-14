@@ -21,12 +21,11 @@
 	</div>
 
 	<script>
-		const toggleBtn = document.querySelector('.toggle-btn')
-		const toggleBtnIcon = document.querySelector('.toggle-btn svg')
-		const DropDownMenu = document.querySelector('.dropdown-menu')
+		const toggleBtn = document.querySelector('.toggle-btn')! as HTMLElement
+		const DropDownMenu = document.querySelector('.dropdown-menu')! as HTMLElement
 
 		toggleBtn.onclick = function () {
-			DropDownMenu?.classList.toggle('open')
+			DropDownMenu.classList.toggle('open')
 		}
 	</script>
 </nav>
