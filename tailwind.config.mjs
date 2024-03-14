@@ -22,10 +22,10 @@ module.exports = {
 			"100%": {
 			  borderColor: "white"
 			}  
-		  }
+		  },
 		},
 		animation: {
-		  typing: "typing 2s steps(20) alternate, blink 1s infinite"
+		  typing: "typing 2s steps(20) alternate, blink 1s infinite",
 		}
 	  },
 	},

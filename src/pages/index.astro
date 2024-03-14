@@ -1,4 +1,5 @@
 ---
+import Nav from '../components/Nav.astro'
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
@@ -6,10 +7,7 @@ import Card from '../components/Card.astro';
 <Layout title="Portfolio">
 	<div class="container h-screen">
 		<main>
-			<a href="/">Home</a>
-			<a href="/photos">Photos</a>
-			<a href="/works">Works</a>
-
+			<Nav/>
 			<div class="icon">
 				<img class="icon"  src="/icon.png" alt="icon"/>
 			</div>
@@ -51,7 +49,7 @@ import Card from '../components/Card.astro';
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 700px;
+		width: 992px;
 		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;

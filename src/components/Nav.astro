@@ -1,0 +1,107 @@
+---
+
+---
+
+<nav>
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/photos">Photos</a></li>
+		<li><a href="/works">Works</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</ul>
+	<div class="toggle-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+	</div>
+		
+	<div class="dropdown-menu open">
+		<li><a href="/">Home</a></li>
+		<li><a href="/photos">Photos</a></li>
+		<li><a href="/works">Works</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</div>
+
+	<script>
+		const toggleBtn = document.querySelector('.toggle-btn')
+		const toggleBtnIcon = document.querySelector('.toggle-btn svg')
+		const DropDownMenu = document.querySelector('.dropdown-menu')
+
+		toggleBtn.onclick = function () {
+			DropDownMenu?.classList.toggle('open')
+		}
+	</script>
+</nav>
+
+<style>
+svg {
+	fill: white;
+	width: 24px;
+}
+nav {
+	width: 100%;
+	height: 60px;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+nav ul{
+	display: flex;
+	gap: 2rem;
+}
+li {
+	list-style: none;
+}
+.toggle-btn {
+	margin: .5rem;
+	cursor: pointer;
+	display: none;
+}
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	right: 2rem;
+	top: 80px;
+	width: 300px;
+	height: 0;
+	opacity: 1;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition: background 0.3s ease 0s;
+}
+
+.dropdown-menu li:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.dropdown-menu.open {
+	height: 240px;
+}
+
+.dropdown-menu li {
+	padding: 0.7rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*responsive*/
+@media(max-width: 992px) {
+	nav ul {
+		display: none;
+	}
+
+	.toggle-btn {
+		display: block;
+	}
+
+	.dropdown-menu {
+		display: block;
+	}
+}
+
+</style>
