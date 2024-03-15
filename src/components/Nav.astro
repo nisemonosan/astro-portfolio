@@ -63,6 +63,7 @@ nav ul{
 li {
 	list-style: none;
 }
+
 .toggle-btn {
 	margin: .5rem;
 	cursor: pointer;
@@ -72,12 +73,14 @@ li {
 .dropdown-menu {
 	display: none;
 	position: absolute;
+	z-index: 9;
 	right: 2rem;
 	top: 80px;
 	width: 300px;
 	height: 0;
 	opacity: 1;
 	background: rgba(255, 255, 255, 0.2);
+	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
 	border-radius: 10px;
 	overflow: hidden;
