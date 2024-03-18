@@ -6,19 +6,37 @@ interface Props {
 	desc: string;
 }
 
-const { href, title, body, desc } = Astro.props;
+const { href, title, body, desc} = Astro.props;
 ---
 
 <div class="rounded-lg bg-white my-4">
 	<div class="flex flex-row items-start">
 		<img
-			class="w-[80px] max-w-fit m-[5px]"
+			class="w-[80px] max-w-fit m-[5px] rounded-md"
 			src={href}
 			alt={title}/>
-		<div class="w-full flex flex-col justify-start ml-2 p-2">
-			<p class="text-center text-white text-sm bg-gray-700 shrink-0 rounded-2xl font-semibold tracking-wider">{desc}</p>
-			<h5 class="text-xl text-black font-medium">{title}</h5>
-			<p class="text-sm text-black font-base">{body}</p>
+		<div class="w-full justify-start ml-2 p-2">
+			<p class="desc text-center text-white text-sm bg-gray-700 shrink-0 rounded-2xl font-semibold tracking-wider">{desc}</p>
+			<div class="card-main flex flex-row">
+				<div class="title flex flex-col">
+					<h5 class="text-xl text-black font-medium my-0.5">{title}</h5>
+					<p class="text-sm text-black font-base">{body}</p>
+				</div>
+				<div class="info">
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
+<style>
+	.desc {
+		width: 100%;	
+	}
+	.info {
+		margin: auto 2px;
+	}
+	.info p{
+		font-size: 1rem;
+	}
+</style>
