@@ -18,7 +18,10 @@ import SocialCard from '../components/SocialCard.astro';
 			<div class="w-max m-4 typing">
 				<p class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-xl text-white font-medium mt-8 mb-8">Hi, I'm apple!<br>This page is about me.</p>
 			</div>
-			
+			<div class="about">
+				<h2 class="text-center font-black text-2xl text-white p-4">about</h2>
+				<div class="main-text px-14 pb-6 text-white font-medium">Hi. Im apple.</div>
+			</div>
 			<div class="card">
 				<Card
 					href='python.png',
@@ -100,6 +103,12 @@ import SocialCard from '../components/SocialCard.astro';
 		max-width: 400px;
 		object-fit: cover;
 		border: solid 4px;
-		
+	}
+	.about {
+		width: 80%;
+		height: 80%;
+		margin: 1rem auto;
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 0.2)
 	}
 </style>
