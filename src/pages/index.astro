@@ -5,7 +5,7 @@ import Card from '../components/Card.astro';
 import SocialCard from '../components/SocialCard.astro';
 ---
 
-<Layout title="Portfolio">
+<Layout title="About">
 	<div class="container h-screen">
 		<main>
 			<Nav/>
@@ -18,8 +18,11 @@ import SocialCard from '../components/SocialCard.astro';
 			<div class="w-max m-4 typing">
 				<p class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-xl text-white font-medium mt-8 mb-8">Hi, I'm apple!<br>This page is about me.</p>
 			</div>
-			
+			<div class="about">
+
+			</div>
 			<div class="card">
+				
 				<Card
 					href='python.png',
 					title='Python',
@@ -99,7 +102,6 @@ import SocialCard from '../components/SocialCard.astro';
 		width: 70%;
 		max-width: 400px;
 		object-fit: cover;
-		border: solid 4px;
-		
+		border: solid 4px;	
 	}
 </style>
